@@ -1,0 +1,83 @@
+/* === ZÁKLADNÍ NASTAVENÍ === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* === MAPOVÉ ROZHRANÍ === */
+#map {
+  height: 100%;
+  /* Pokud by bylo potřeba zamezit interakci: pointer-events: none; */
+}
+
+/* === TLAČÍTKA OVLÁDÁNÍ (všeobecné styly) === */
+.control-buttons {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+
+  z-index: 1000; /* zajistí překrytí ostatních prvků */
+}
+
+/* Hover efekt pro lepší UX */
+.control-buttons:hover {
+  background-color: #eee;
+}
+
+/* Ikony uvnitř tlačítek */
+.control-buttons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* === POZICE ZOOM OVLÁDÁNÍ === */
+#zoom-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  z-index: 1000;
+}
+
+/* === POZICE SMĚROVÉHO OVLÁDÁNÍ === */
+#direction-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  z-index: 1000;
+}
+
+/* === POZICE DOMŮ === */
+#home-controls {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  z-index: 1000;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PRODA Semestrálka</title>
+    <link rel="stylesheet" href="novy.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <!-- Zóny pro pohyb -->
+    <div class="zone zone-top" data-direction="up"></div>
+    <div class="zone zone-bottom" data-direction="down"></div>
+    <div class="zone zone-left" data-direction="left"></div>
+    <div class="zone zone-right" data-direction="right"></div>
+
+    <!-- Zoom zóny -->
+    <div class="zone zone-zoom zone-zoomin top-left" data-zoom="in"></div>
+    <div class="zone zone-zoom zone-zoomin top-right" data-zoom="in"></div>
+    <div class="zone zone-zoom zone-zoomout bottom-left" data-zoom="out"></div>
+    <div class="zone zone-zoom zone-zoomout bottom-right" data-zoom="out"></div>
+
+    <!-- Nápověda -->
+    <div id="helpOverlay" class="help-overlay hidden">
+        <div class="help-box">
+            <h3>Ovládání mapy</h3>
+            <ul>
+                <li>Zóny: rohy = přiblížení (nahoře), oddálení (dole)</li>
+                <li>Zóny: nahoře, dole, vpravo, vlevo -> pohyb </li>
+                <li>Najeď do zóny a pak drž „w“ pro pohyb nebo zoom</li>
+                <li>Stiskni „h“ pro původní extent</li>
+                <li>Stiskni „i“ pro zobrazení/skrytí nápovědy</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="novy.js"></script>
+</body>
+</html>
